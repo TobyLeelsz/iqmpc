@@ -18,7 +18,6 @@ from common.buffer import Buffer
 from envs import make_env
 from common.offline_dataset import IRLBuffer
 from tdmpc2 import TDMPC2
-from trainer.offline_trainer import OfflineTrainer
 from trainer.online_trainer import OnlineTrainer
 from common.logger import Logger
 
@@ -55,7 +54,7 @@ def train(cfg: dict):
 	set_seed(cfg.seed)
 	print(colored('Work dir:', 'yellow', attrs=['bold']), cfg.work_dir)
 
-	trainer_cls = OfflineTrainer if cfg.multitask else OnlineTrainer
+	trainer_cls = OnlineTrainer
 	trainer = trainer_cls(
 		cfg=cfg,
 		env=make_env(cfg, test=True),

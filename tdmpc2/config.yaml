@@ -2,9 +2,9 @@ defaults:
     - override hydra/launcher: submitit_local
 
 # environment
-task: dog-walk
+task: hopper-hop
 obs: state
-dataset_path: tdmpc2/dataset/offline_dataset.dat
+dataset_path: /shangzhe-slow-vol/tdmpc2-iqlearn-normed-hopper/tdmpc2/dataset/offline_dataset_clean_hopper.dat
 
 # evaluation
 checkpoint: ???
@@ -31,7 +31,7 @@ exp_name: default
 data_dir: ???
 
 # planning
-mpc: true
+mpc: false
 iterations: 6
 num_samples: 512
 num_elites: 64
