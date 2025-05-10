@@ -5,6 +5,10 @@ Shangzhe Li, Zhiao Huang, Hao Su
 
 ![demo_IQMPC](/images/combined_vertical_video.gif)
 
+##  Introduction
+
+IQ-MPC is a world model designed for online imitation learning. It leverages the inverse soft-Q objective to train the critic, enabling effective policy learning from limited expert demonstrations and online reward-free interactions. Built upon the architecture of [TD-MPC2](https://www.tdmpc2.com/), IQ-MPC excels in handling complex tasks such as dexterous hand manipulation and high-dimensional locomotion.
+
 ## Environment Setup and Running the Code
 
 1. Setup the environment using the following commands:
