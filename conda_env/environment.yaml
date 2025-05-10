@@ -1,4 +1,4 @@
-name: tdmpc2
+name: iqmpc
 channels:
   - pytorch-nightly
   - nvidia
