@@ -30,7 +30,7 @@ class WorldModel(nn.Module):
 
 		self._Qs_original = layers.Ensemble([layers.mlp(cfg.latent_dim + cfg.action_dim + cfg.task_dim, 2*[cfg.mlp_dim], 1, dropout=cfg.dropout) for _ in range(cfg.num_q)])
 		self.apply(init.weight_init)
-		init.zero_([self._reward[-1].weight, self._Qs_original.params[-2]])
+		init.zero_([self._Qs_original.params[-2]])
 		self._target_Qs = deepcopy(self._Qs_original).requires_grad_(False)
 		self.log_std_min = torch.tensor(cfg.log_std_min)
 		self.log_std_dif = torch.tensor(cfg.log_std_max) - self.log_std_min
