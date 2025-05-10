@@ -4,6 +4,7 @@ defaults:
 # environment
 task: dog-walk
 obs: state
+dataset_path: tdmpc2/dataset/offline_dataset.dat
 
 # evaluation
 checkpoint: ???
