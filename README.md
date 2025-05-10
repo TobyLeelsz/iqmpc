@@ -12,8 +12,9 @@ Shangzhe Li, Zhiao Huang, Hao Su
 conda env create -f conda_env/environment.yaml
 conda activate iqmpc
 ```
-2. Set the task in config.json and the correct expert dataset correspnding to the task. [**(WIP) Expert Datasets are coming soon!**]
-3. Run the training code:
+2. Download the expert datasets [here](https://drive.google.com/drive/folders/1d_0ks7Ion9onWrWEX9JBGDiaB7oNB6da?usp=sharing), which includes the expert dataset for 6 DMControl tasks and 3 MyoSuite tasks. All of the expert demonstrations are sampled from a trained single-task TD-MPC2 agent.
+3. Set the task in config.json and the correct expert dataset path correspnding to the task.
+4. Run the training code:
 ```
 python3 tdmpc2/train.py
 ```
