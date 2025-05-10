@@ -98,15 +98,11 @@ class IRLBuffer():
 
     def load_dataset(self, env):
         self.env = env
-        with open("dataset.dat", "rb") as f:
+        with open(self.cfg.dataset_path, "rb") as f:
             dataset = pickle.load(f)
 
-        # pdb.set_trace()
-        # dataset = dataset[:10]  # NOTE: 200 version
-
         for idx in range(len(dataset)):
-            # print(f"Average sum of rewards for episode {idx}:", np.sum(dataset[idx][2]))
-            for step in range(len(dataset[idx][0])): # TODO: temp test of embedding 
+            for step in range(len(dataset[idx][0])):
                 if step == 0:
                     tds = [self.to_td(torch.from_numpy(dataset[idx][0][step]))]
                 obs = torch.from_numpy(dataset[idx][3][step])
