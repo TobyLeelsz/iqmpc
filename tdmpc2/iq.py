@@ -25,10 +25,6 @@ def iq_loss(agent, current_Q, current_v, next_v, z, gamma=0.99, expert_only=True
 
     loss += value_loss
     loss_dict['value_loss'] = value_loss.item()
-    
-    y = gamma * next_v
-
-    y = gamma * next_v
 
     reward = current_Q - y
     chi2_loss = 1/(4 * alpha) * (reward**2).mean()
