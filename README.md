@@ -1,5 +1,5 @@
 # Reward-free World Models for Online Imitation Learning
-Official Code Implementation of ICML 2025 paper: **Reward-free World Models for Online Imitation Learning**   [[Paper Link]](https://arxiv.org/abs/2410.14081)
+Official code implementation of ICML 2025 paper: **Reward-free World Models for Online Imitation Learning**   [[Paper Link]](https://arxiv.org/abs/2410.14081)
 
 Shangzhe Li, Zhiao Huang, Hao Su
 
